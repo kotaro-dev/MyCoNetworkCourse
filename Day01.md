@@ -135,7 +135,7 @@ C:\Users\MyCo>hostname|nslookup
 既定のサーバー:  dns.workgroup
 Address:  192.168.1.1
 
-> サーバー:  dns.workslan
+> サーバー:  dns.workgroup
 Address:  192.168.1.1
 
 *** dns.workgroup が MyCowin7 を見つけられません: Non-existent domain
