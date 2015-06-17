@@ -13,9 +13,9 @@
 
 *利用しているweb service が急に表示されなくなった場合を想定*
 
-#### [1] ping - start position
+#### <a id="ping">[1] ping - start position</a>
 
-- reason for ping -> ([3] ping divide into two groups - backyard)
+- reason for ping -> [[3] ping divide into two groups - backyard](#osi-model)
 
 *backgroundを学ぶ理由*
 
@@ -27,7 +27,7 @@ Network構成図を用いて、平面的に問題箇所を切り分け、
 Network Modelを理解して、階層化されたデータの流れを意識して下さい。
 ```
 
-- ping success -> ([1-1] connect into the server)
+- ping success -> [[1-1] connect into the server](#ping-ok)
 
 *ping success sample*
 ```
@@ -45,7 +45,7 @@ C:\Users\IEUser>ping 10.0.2.6
     最小 = 0ms、最大 = 1ms、平均 = 0ms
 ```
 
-- ping error   -> ([2] tracert)
+- ping error   -> [[2] tracert](#ping-err)
 
 *ping error sample*
 ```
@@ -61,13 +61,13 @@ C:\Users\IEUser>ping 10.0.2.5
     パケット数: 送信 = 4、受信 = 0、損失 = 4 (100% の損失)、
 ```
 
-#### [1-1] connect into the server with RDP or ssh (ping success)
+#### <a id="ping-ok">[1-1] connect into the server with RDP or ssh (ping success)</a>
 
-- connet success -> ([1-1-1] check the service and show the log)
+- connet success -> [[1-1-1] check the service and show the log](#conn-ok)
 
-- connet error   -> ([1-1-2] check the used port and stand up to go the server room)
+- connet error   -> [[1-1-2] check the used port and stand up to go the server room](#conn-err)
 
-###### [1-1-1] check the service and show the log (connect success)
+###### <a id="conn-ok">[1-1-1] check the service and show the log (connect success)</a>
 
 *service list*
 ```
@@ -128,7 +128,7 @@ serviceのlog がerrorを出力していないか？
 など、起動後のチェックも忘れないようにしましょう。
 ```
 
-###### [1-1-2] check the used port and stand up to go the server room (connect error)
+###### <a id="conn-err">[1-1-2] check the used port and stand up to go the server room (connect error)</a>
 
 port check
 
@@ -147,14 +147,14 @@ ServerにRemoteで接続できないのであれば
 Server Room で Monitor を使い問題解消して下さい。
 ```
 
-#### [2] tracert - (ping error)
+#### <a id="ping-err">[2] tracert - (ping error)</a>
 
 **tracert**
 **ipconfig /all |ifconfig (ip a)**
 
-- inside the gateway      -> ([2-1] client area)
-- loss between the router -> ([2-2] middle area)
-- get the server gateway  -> ([2-3] server area)
+- inside the gateway      -> [[2-1] client area](#cliet-area)
+- loss between the router -> [[2-2] middle area](#middle-area)
+- get the server gateway  -> [[2-3] server area](#server-area)
 
 *tracert sample*
 ```
@@ -177,7 +177,7 @@ apache-svr [10.0.3.6] へのルートをトレースしています
 [Server Area] - 10.0.3.6   に到達しない場合
 ```
 
-###### [2-1] client area
+###### <a id="client-area">[2-1] client area</a>
 
 Client area - 自端末のGatewayまでのArea
 ```
@@ -194,7 +194,7 @@ Client area - 自端末のGatewayまでのArea
    ->固定IP。無許可DHCP。など
 ```
 
-###### [2-2] middle area
+###### <a id="middle-area">[2-2] middle area</a>
 
 Middle Area - 自端末のGatewayからServer AreaのGatewayの間
 ```
@@ -208,7 +208,7 @@ Middle Area - 自端末のGatewayからServer AreaのGatewayの間
   [対応]：通信の目的もきちんと把握して設定お願いします。
 ```
 
-###### [2-3] server area
+###### <a id="server-area">[2-3] server area</a>
 
 Server Area - Server AreaのGatewayからServer まで
 ```
@@ -223,7 +223,7 @@ Server Area - Server AreaのGatewayからServer まで
 
 ```
 
-#### [3] ping divide into two groups - backyard
+#### <a id="osi-model">[3] ping divide into two groups - backyard</a>
 
 **OSI Reference Model & TCP/IP Model**
 
@@ -298,3 +298,5 @@ Area分割：
 [Middle Area] - Router 等の設定の可能性が高い。network管理者に相談です。
 [Server Area] - server PC もしくは その周辺機器の影響。Server管理者が解決して下さい。
 ```
+
+[ping](#ping) へ戻る
