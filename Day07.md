@@ -152,7 +152,7 @@ Server Room で Monitor を使い問題解消して下さい。
 **tracert**
 **ipconfig /all |ifconfig (ip a)**
 
-- inside the gateway      -> [[2-1] client area](#cliet-area)
+- inside the gateway      -> [[2-1] client area](#client-area)
 - loss between the router -> [[2-2] middle area](#middle-area)
 - get the server gateway  -> [[2-3] server area](#server-area)
 
@@ -299,4 +299,4 @@ Area分割：
 [Server Area] - server PC もしくは その周辺機器の影響。Server管理者が解決して下さい。
 ```
 
-[ping](#ping) へ戻る
+[[1]ping](#ping) へ戻る
