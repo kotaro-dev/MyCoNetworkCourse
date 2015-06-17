@@ -20,3 +20,6 @@
 
 #### Day06： PING? Ping! ping...   
 - (ping を使いこなす)
+
+#### Day07: isolate the problem
+- (問題の切り分け手順と判断理由)
