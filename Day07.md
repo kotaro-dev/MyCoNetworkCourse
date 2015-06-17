@@ -69,9 +69,43 @@ C:\Users\IEUser>ping 10.0.2.5
 
 ###### [1-1-1] check the service and show the log (connect success)
 
+*service list*
 ```
-tasklist
-service list (net start) (sc query type= service|findstr DISPLAY_NAME)
+[windows]
+GUI:
+  Service Manager
+CLI:
+  sc query type= service|findstr DISPLAY_NAME
+  net start
+  
+[Linux]
+CLI:
+  service --status-all
+```
+
+*tasklist*
+```
+[windows]
+GUI:
+  Task Manager
+CLI:
+  tasklist
+  
+[linux]
+CLI:
+  top
+```
+
+*active connection counter*
+```
+[windows]
+GUI:
+  perfmon.exe
+CLI:
+  typeperf
+[linux]
+CLI:
+  netstat -alpn |grep -E ':(80|443)'
 ```
 
 ```
