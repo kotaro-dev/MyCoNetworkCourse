@@ -23,3 +23,12 @@
 
 #### Day07: isolate the problem
 - (問題の切り分け手順と判断理由)
+
+#### Day08: Stress test and Active connection check
+- (JMeterを使った負荷テストの手順と Application serverでのConnection確認方法)
+
+#### Day09: Reverse Proxy Server - the Load Balancing Series
+- (Front と Back に分ける - 負荷分散 - Series01)
+
+#### Day10: Cache Server - the Load Balancing Series
+- (Cache Server - the Load Balancing Series)
