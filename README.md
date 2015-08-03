@@ -31,4 +31,10 @@
 - (Front と Back に分ける - 負荷分散 - Series01)
 
 #### Day10: Cache Server - the Load Balancing Series
-- (Cache Server - the Load Balancing Series)
+- (Cache Serverを用意する - 負荷分散 - Series02)
+
+#### Day11: Apache2 Load Balancing Server - the Load Balancing Series
+- (Load Balancer を構築する - 負荷分散 - Series03)
+
+#### Day12: Isolate the DB Server - the Load Balancing Series
+- (DB Serverを分離する - 負荷分散 - Series04)
